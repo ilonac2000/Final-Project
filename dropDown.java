@@ -3,6 +3,8 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.BoxLayout;
+import java.awt.Component;
 
 public class dropDown {
 
@@ -15,23 +17,24 @@ public static void main(String[] args) {
     frame.setLocation(430, 100);
 
     JPanel panel = new JPanel();
+    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
 
     frame.add(panel);
 
     JLabel lbl = new JLabel("Month");
-    lbl.setVisible(true);
 
     panel.add(lbl);
 
-    String[] choices = { "January","February", "March","April","May","June","July","August", ,"September","October","November","December"};
+    String[] choices = { "January","February", "March","April","May","June","July","August","September","October","November","December"};
 
     final JComboBox<String> cb = new JComboBox<String>(choices);
 
-    cb.setVisible(true);
     panel.add(cb);
 
     JButton btn = new JButton("OK");
     panel.add(btn);
+
+    frame.setVisible(true);
 
     }
 }
