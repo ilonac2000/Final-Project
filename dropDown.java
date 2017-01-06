@@ -11,17 +11,17 @@ public class dropDown {
 public static void main(String[] args) {
 
     JFrame frame = new JFrame("Drop Down Menu");
-    frame.setVisible(true);
-    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    frame.setSize(500, 500);
-    frame.setLocation(430, 100);
-
     JPanel panel = new JPanel();
-    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-
-    frame.add(panel);
 
     JLabel lbl = new JLabel("Month");
+    frame.setVisible(true);
+    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    frame.setSize(100, 80);
+
+    panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+    frame.add(panel);
+
+    lbl.setAlignmentX(Component.CENTER_ALIGNMENT);
 
     panel.add(lbl);
 
@@ -30,10 +30,6 @@ public static void main(String[] args) {
     final JComboBox<String> cb = new JComboBox<String>(choices);
 
     panel.add(cb);
-
-    JButton btn = new JButton("OK");
-    panel.add(btn);
-
     frame.setVisible(true);
 
     }
