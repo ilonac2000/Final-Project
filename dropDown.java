@@ -8,7 +8,7 @@ public class dropDown {
 
 public static void main(String[] args) {
 
-    JFrame frame = new JFrame("A Simple GUI");
+    JFrame frame = new JFrame("Drop Down Menu");
     frame.setVisible(true);
     frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     frame.setSize(500, 500);
@@ -18,12 +18,12 @@ public static void main(String[] args) {
 
     frame.add(panel);
 
-    JLabel lbl = new JLabel("Select one of the possible choices and click OK");
+    JLabel lbl = new JLabel("Month");
     lbl.setVisible(true);
 
     panel.add(lbl);
 
-    String[] choices = { "CHOICE 1","CHOICE 2", "CHOICE 3","CHOICE 4","CHOICE 5","CHOICE 6"};
+    String[] choices = { "January","February", "March","April","May","June","July","August", ,"September","October","November","December"};
 
     final JComboBox<String> cb = new JComboBox<String>(choices);
 
