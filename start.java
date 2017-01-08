@@ -3,6 +3,7 @@ import java.awt.*;
 public class start extends JFrame {
  private Container pane;
  private JLabel a;
+ private JLabel im;
  private JButton map;
  private JButton time;
  private JButton date;
@@ -26,6 +27,9 @@ public class start extends JFrame {
      map.setFont(new Font("Arial", Font.PLAIN, 50));
      time.setFont(new Font("Arial", Font.PLAIN, 50));
      date.setFont(new Font("Arial", Font.PLAIN, 50));
+     im = new JLabel(new ImageIcon("ufo.png"));
+     im.setSize(500, 100);
+     pane.add(im);
      pane.add(a);
      pane.add(map);
      pane.add(time);
