@@ -23,7 +23,7 @@ public Window() {
      a.setForeground(Color.white);
      a.setFont(new Font("Arial", Font.BOLD, 72));
      JButton map = new JButton("Map");
-     map.addActionListener(this);
+ map.addActionListener(this);
      map.setActionCommand("places");
      JButton time = new JButton("Timeline");
      time.addActionListener(this);
@@ -54,8 +54,9 @@ public Window() {
     new Window().setVisible(true);
    }
    if(event.equals("calendar")){
-    new Window3().setVisible(true);
+    new Window().setVisible(true);
    }
   }
 }
+
 
