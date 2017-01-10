@@ -16,16 +16,17 @@ public class Dataizer{
 
 
 
+
 	 
     try{  Scanner sc = new Scanner(new File(fileName)).useDelimiter("\\s*delimit\\s*");
-	try{  	while(sc.hasNextLine()){
-		    dates.add((sc.nextLine()));
-		  city.add((sc.nextLine()));
-		   state.add((sc.nextLine()));
-		    shape.add((sc.nextLine()));
-		    times.add((sc.nextLine()));
-		    desc.add((sc.nextLine()));
-		    posted.add((sc.nextLine()));
+	try{  	while(sc.hasNext()){
+		    dates.add((sc.next()));
+		  city.add((sc.next()));
+		   state.add((sc.next()));
+		    shape.add((sc.next()));
+		    times.add((sc.next()));
+		    desc.add((sc.next()));
+		    posted.add((sc.next()));
 	    }}
 	    catch(NoSuchElementException e){
 	    }
@@ -36,11 +37,14 @@ public class Dataizer{
         	System.out.println("File Does Not Exist");
         	System.exit(1);
  }
+    //   String[][][][] data = new String[dates.size()][dates.size()[dates.size()[dates.size();
+	  
+									     
     }
     
   public static void main(String[]args){
       organize("UFOData.txt");
-      // System.out.println(Arrays.toString(places));
+
        }
 
 
