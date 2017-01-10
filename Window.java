@@ -1,16 +1,17 @@
 import javax.swing.*;
 import java.awt.*;
-public class Window extends JFrame {
+import java.awt.event.*;
+public class Window extends JFrame implements ActionListener{
  private Container pane;
  private JLabel a;
  private JLabel im;
- private JButton map;
- private JButton time;
- private JButton date;
+ //private JButton map;
+ //private JButton time;
+ //private JButton date;
  private JTextField t;
 
  
-  public Window() {
+public Window() {
      this.setTitle("Start");
      this.setSize(1200,600);
      this.setLocation(100, 10);
@@ -21,43 +22,40 @@ public class Window extends JFrame {
      a = new JLabel("How do you want to see the data?", JLabel.CENTER);
      a.setForeground(Color.white);
      a.setFont(new Font("Arial", Font.BOLD, 72));
-     map = new JButton("Map");
-     time = new JButton("Timeline");
-     date = new JButton("Choice a date");
+     JButton map = new JButton("Map");
+     map.addActionListener(this);
+     map.setActionCommand("places");
+     JButton time = new JButton("Timeline");
+     time.addActionListener(this);
+     time.setActionCommand("graph");
+     JButton date = new JButton("Choice a date");
+     date.addActionListener(this);
+     date.setActionCommand("calendar");
      map.setFont(new Font("Arial", Font.PLAIN, 50));
      time.setFont(new Font("Arial", Font.PLAIN, 50));
      date.setFont(new Font("Arial", Font.PLAIN, 50));
      pane.add(a);
      pane.add(map);
      pane.add(time);
-     pane.add(date);
-     map.addActionListener(this);
-     map.setActionCommand("places");
-     time.addActionListener(this);
-     time.setActionCommand("graph");
-     date.addActionListener(this);
-     date.setActionCommand("calendar");
+     pane.add(date); 
  }
 
-  public void actionPerformed(ActionEvent e){
-   String event = e.getActionCommand();
-   if(event.equals("places")){
-     String s = t.getText();
-     s += "-0101000";
-     j.setText(s);
-   }
-   if(event.equals("graph")){
-    j.setText("Fish");
-   }
-   if(event.equals("calendar")){
-    
-   }
-  }
 
   public static void main(String[] args) {
      Window starter = new Window();
      starter.setVisible(true);
+}
+  public void actionPerformed(ActionEvent e){
+   String event = e.getActionCommand();
+   if(event.equals("places")){
+     new Window2().setVisible(true);
+   }
+   if(event.equals("graph")){
+    new Window().setVisible(true);
+   }
+   if(event.equals("calendar")){
+    new Window3().setVisible(true);
+   }
   }
 }
-
 
