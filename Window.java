@@ -1,6 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
-public class start extends JFrame {
+public class Window extends JFrame {
  private Container pane;
  private JLabel a;
  private JLabel im;
@@ -10,7 +10,7 @@ public class start extends JFrame {
  private JTextField t;
 
  
-  public start() {
+  public Window() {
      this.setTitle("Start");
      this.setSize(1200,600);
      this.setLocation(100, 10);
@@ -27,18 +27,37 @@ public class start extends JFrame {
      map.setFont(new Font("Arial", Font.PLAIN, 50));
      time.setFont(new Font("Arial", Font.PLAIN, 50));
      date.setFont(new Font("Arial", Font.PLAIN, 50));
-     im = new JLabel(new ImageIcon("ufo.png"));
-     im.setSize(500, 100);
-     pane.add(im);
      pane.add(a);
      pane.add(map);
      pane.add(time);
      pane.add(date);
+     map.addActionListener(this);
+     map.setActionCommand("places");
+     time.addActionListener(this);
+     time.setActionCommand("graph");
+     date.addActionListener(this);
+     date.setActionCommand("calendar");
  }
 
- 
+  public void actionPerformed(ActionEvent e){
+   String event = e.getActionCommand();
+   if(event.equals("places")){
+     String s = t.getText();
+     s += "-0101000";
+     j.setText(s);
+   }
+   if(event.equals("graph")){
+    j.setText("Fish");
+   }
+   if(event.equals("calendar")){
+    
+   }
+  }
+
   public static void main(String[] args) {
-     start starter = new start();
+     Window starter = new Window();
      starter.setVisible(true);
   }
 }
+
+
