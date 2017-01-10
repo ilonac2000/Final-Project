@@ -5,6 +5,7 @@ import java.awt.event.*;
 public class Window3 extends JFrame {
     private Container pane;
     private JLabel a;
+    private JButton year;
 
    public Window3() {
      this.setTitle("Calendar");
@@ -42,14 +43,13 @@ public class Window3 extends JFrame {
     final JComboBox<String> cb2 = new JComboBox<String>(choices2);
 
     pane.add(cb2);
-
+    year = new JButton("2016");
+    pane.add(year);
 }
   public static void main(String[] args) {
      Window3 starter = new Window3();
      starter.setVisible(true);
 }
     }
-
-
 
 
