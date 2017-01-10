@@ -23,5 +23,40 @@ public Window() {
      a.setForeground(Color.white);
      a.setFont(new Font("Arial", Font.BOLD, 72));
      JButton map = new JButton("Map");
-     
-     }
+ map.addActionListener(this);
+     map.setActionCommand("places");
+     JButton time = new JButton("Timeline");
+     time.addActionListener(this);
+     time.setActionCommand("graph");
+     JButton date = new JButton("Choice a date");
+     date.addActionListener(this);
+     date.setActionCommand("calendar");
+     map.setFont(new Font("Arial", Font.PLAIN, 50));
+     time.setFont(new Font("Arial", Font.PLAIN, 50));
+     date.setFont(new Font("Arial", Font.PLAIN, 50));
+     pane.add(a);
+     pane.add(map);
+     pane.add(time);
+     pane.add(date); 
+ }
+
+
+  public static void main(String[] args) {
+     Window starter = new Window();
+     starter.setVisible(true);
+}
+  public void actionPerformed(ActionEvent e){
+   String event = e.getActionCommand();
+   if(event.equals("places")){
+     new Window2().setVisible(true);
+   }
+   if(event.equals("graph")){
+    new Window().setVisible(true);
+   }
+   if(event.equals("calendar")){
+    new Window().setVisible(true);
+   }
+  }
+}
+
+
