@@ -8,10 +8,11 @@ public class Dataizer{
     public static void organize (String fileName){
      ArrayList<String> dates  = new ArrayList<String>();
   ArrayList<String> times  = new ArrayList<String>();
-     ArrayList<String> places  = new ArrayList<String>();
+     ArrayList<String> city  = new ArrayList<String>();
     ArrayList<String> shape  = new ArrayList<String>();
   ArrayList<String> desc  = new ArrayList<String>();
     ArrayList<String> posted  = new ArrayList<String>();
+        ArrayList<String> state  = new ArrayList<String>();
 
 
 
@@ -19,7 +20,8 @@ public class Dataizer{
     try{  Scanner sc = new Scanner(new File(fileName)).useDelimiter("\\s*delimit\\s*");
 	try{  	while(sc.hasNextLine()){
 		    dates.add((sc.nextLine()));
-		    places.add((sc.nextLine()));
+		  city.add((sc.nextLine()));
+		   state.add((sc.nextLine()));
 		    shape.add((sc.nextLine()));
 		    times.add((sc.nextLine()));
 		    desc.add((sc.nextLine()));
