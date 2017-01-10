@@ -48,7 +48,7 @@ public Window() {
   public void actionPerformed(ActionEvent e){
    String event = e.getActionCommand();
    if(event.equals("places")){
-     new Window().setVisible(true);
+     new Window2().setVisible(true);
    }
    if(event.equals("graph")){
     new Window().setVisible(true);
