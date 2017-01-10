@@ -1,62 +1,22 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-public class Window extends JFrame implements ActionListener{
+public class Window2 extends JFrame{
  private Container pane;
- private JLabel a;
- private JLabel im;
- //private JButton map;
- //private JButton time;
- //private JButton date;
- private JTextField t;
+ private JLabel bkgrd;
 
- 
-public Window() {
-     this.setTitle("Start");
-     this.setSize(1200,600);
+ public Window2() {
+     this.setTitle("Places");
+     this.setSize(1200,765);
      this.setLocation(100, 10);
-     this.setDefaultCloseOperation(EXIT_ON_CLOSE);  
-     pane = this.getContentPane();
-     pane.setLayout(new FlowLayout());
-     pane.setBackground(Color.black);
-     a = new JLabel("How do you want to see the data?", JLabel.CENTER);
-     a.setForeground(Color.white);
-     a.setFont(new Font("Arial", Font.BOLD, 72));
-     JButton map = new JButton("Map");
- map.addActionListener(this);
-     map.setActionCommand("places");
-     JButton time = new JButton("Timeline");
-     time.addActionListener(this);
-     time.setActionCommand("graph");
-     JButton date = new JButton("Choice a date");
-     date.addActionListener(this);
-     date.setActionCommand("calendar");
-     map.setFont(new Font("Arial", Font.PLAIN, 50));
-     time.setFont(new Font("Arial", Font.PLAIN, 50));
-     date.setFont(new Font("Arial", Font.PLAIN, 50));
-     pane.add(a);
-     pane.add(map);
-     pane.add(time);
-     pane.add(date); 
+     this.setDefaultCloseOperation(EXIT_ON_CLOSE);
+	 setLayout(new BorderLayout());
+     bkgrd = new JLabel(new ImageIcon("map.jpeg"));
+     add(bkgrd);
  }
-
-
-  public static void main(String[] args) {
-     Window starter = new Window();
+ public static void main(String[] args) {
+     Window2 starter = new Window2();
      starter.setVisible(true);
 }
-  public void actionPerformed(ActionEvent e){
-   String event = e.getActionCommand();
-   if(event.equals("places")){
-     new Window2().setVisible(true);
-   }
-   if(event.equals("graph")){
-    new Window().setVisible(true);
-   }
-   if(event.equals("calendar")){
-    new Window().setVisible(true);
-   }
-  }
 }
-
 
