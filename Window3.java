@@ -58,6 +58,13 @@ public static void PopUp(){
         
      }
 
+public static void PopUpFeb(){
+        final JFrame parent = new JFrame();
+        JButton button = new JButton();
+        JOptionPane.showMessageDialog(null, "February only had 29 days");
+        
+     }
+
   public void actionPerformed(ActionEvent e){
    String event = e.getActionCommand();
    if(event.equals("result")){
@@ -71,32 +78,24 @@ public static void PopUp(){
         chosen.equals("September")|| 
         chosen.equals("November")))
         {
-       // if (chosenDay == "31"){
-            System.out.println("NO");
-            //PopUp();
+            //System.out.println("NO");
+            PopUp();
      }
+    else if((Integer.valueOf(chosenDay) > 29) && (chosen.equals("February"))){
+        //System.out.println("NAH");
+        PopUpFeb();
      }
+    }
  
 }
-
-/*January - 31 days
-February - 28 days in a common year and 29 days in Leap Years
-March - 31 days
-April - 30 days
-May - 31 days
-June - 30 days
-July - 31 days
-August - 31 days
-September - 30 days
-October - 31 days
-November - 30 days
-December - 31 days*/
-
-  public static void main(String[] args) {
+public static void main(String[] args) {
      Window3 starter = new Window3();
      starter.setVisible(true);   
 }
     }
+
+
+
 
 
 
