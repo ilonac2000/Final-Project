@@ -1,8 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-
-
 public class Window3 extends JFrame implements ActionListener{
     private Container pane;
     private JLabel a;
