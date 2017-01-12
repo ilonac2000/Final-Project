@@ -1,18 +1,18 @@
 import java.util.*; 
 import java.io.*; 
 public class Dataizer{
+     private static ArrayList<String> dates  = new ArrayList<String>();
+  private static ArrayList<String> times  = new ArrayList<String>();
+private static     ArrayList<String> city  = new ArrayList<String>();
+ private static   ArrayList<String> shape  = new ArrayList<String>();
+private static  ArrayList<String> desc  = new ArrayList<String>();
+    private static ArrayList<String> posted  = new ArrayList<String>();
+       private static ArrayList<String> state  = new ArrayList<String>();
 
      
 
     
     public static void organize (String fileName){
-     ArrayList<String> dates  = new ArrayList<String>();
-  ArrayList<String> times  = new ArrayList<String>();
-     ArrayList<String> city  = new ArrayList<String>();
-    ArrayList<String> shape  = new ArrayList<String>();
-  ArrayList<String> desc  = new ArrayList<String>();
-    ArrayList<String> posted  = new ArrayList<String>();
-        ArrayList<String> state  = new ArrayList<String>();
 
 
 
