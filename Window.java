@@ -29,6 +29,7 @@ public class Window3 extends JFrame implements ActionListener{
      pane.add(a);
      JLabel lbl = new JLabel("Month");
      lbl.setForeground(Color.white);
+     lbl.setAlignmentX(Component.CENTER_ALIGNMENT);
      lbl.setFont(new Font("Arial", Font.BOLD, 20));
      //lbl.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
@@ -43,7 +44,7 @@ public class Window3 extends JFrame implements ActionListener{
     JLabel lbl2 = new JLabel("Day");
     lbl2.setForeground(Color.white);
     lbl2.setFont(new Font("Arial", Font.BOLD, 20));
-    //lbl2.setAlignmentX(Component.RIGHT_ALIGNMENT);
+    lbl2.setAlignmentX(Component.CENTER_ALIGNMENT);
     pane.add(lbl2);
     String[] choices2 = new String[31];
     for (int i = 0; i < 31; i++){
@@ -52,8 +53,10 @@ public class Window3 extends JFrame implements ActionListener{
     cb2 = new JComboBox<String>(choices2);
     //cb2.setPrototypeDisplayValue("January");
     cb2.setMaximumSize(cb2.getPreferredSize() );
+    cb2.setAlignmentX(Component.CENTER_ALIGNMENT);
     pane.add(cb2);
     year = new JButton("2016");
+    year.setAlignmentX(Component.CENTER_ALIGNMENT);
     pane.add(year);
     year.addActionListener(this);
     year.setActionCommand("result");
@@ -65,6 +68,7 @@ public class Window3 extends JFrame implements ActionListener{
 //buttonPanel.setLocation(150, 150);
 JButton clickmeButton = new JButton("Back");
 pane.add(clickmeButton, BorderLayout.SOUTH);
+clickmeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
 //this.add(pane,B);
 
 }
@@ -131,6 +135,7 @@ public static void main(String[] args) {
      starter.setVisible(true);   
 }
     }
+
 
 
 
