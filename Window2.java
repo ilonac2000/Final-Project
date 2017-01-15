@@ -24,22 +24,24 @@ public Window2() {
      this.setDefaultCloseOperation(EXIT_ON_CLOSE);  
      pane = this.getContentPane();
      pane.setLayout(null);
-     a = new JLabel("32");
-     a.setFont(new Font("Arial", Font.BOLD, 40));
-     a.setLocation(10,10);
-     a.setBounds(100,100,200,30);
-     pane.add(a);
-     a.setOpaque(true);
+;
      try {
     final Image backgroundImage = javax.imageio.ImageIO.read(new File("map.jpeg"));
     setContentPane(new JPanel(new BorderLayout()) {
-        @Override public void paintComponent(Graphics g) {
+       // @Override
+         public void paintComponent(Graphics g) {
             g.drawImage(backgroundImage, 0, 0, null);
         }
     });
 } catch (IOException e) {
     throw new RuntimeException(e);
 }
+     a = new JLabel("32");
+     a.setFont(new Font("Arial", Font.BOLD, 40));
+     a.setLocation(30,10);
+     a.setBounds(100,100,200,30);
+     add(a);
+     //a.setOpaque(true);
  }
 
 /*public Window2(){
@@ -63,6 +65,8 @@ public Window2() {
      starter.setVisible(true);
 }
 }
+
+
 
 
 
