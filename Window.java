@@ -57,18 +57,24 @@ public class Window3 extends JFrame implements ActionListener{
     pane.add(cb2);
     year = new JButton("2016");
     year.setAlignmentX(Component.CENTER_ALIGNMENT);
-    pane.add(year);
+   // pane.add(year);
     year.addActionListener(this);
     year.setActionCommand("result");
+    //pane.add(Box.createRigidArea(new Dimension(5,0)));
 
 
   //  this.setLayout(new BorderLayout());
 //JPanel buttonPanel = new JPanel();
 //buttonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 //buttonPanel.setLocation(150, 150);
-JButton clickmeButton = new JButton("Back");
-pane.add(clickmeButton, BorderLayout.SOUTH);
-clickmeButton.setAlignmentX(Component.CENTER_ALIGNMENT);
+JButton home = new JButton("Back");
+home.setAlignmentX(Component.CENTER_ALIGNMENT);
+    pane.add(year);
+    pane.add(Box.createRigidArea(new Dimension(3000,350)));
+    //pane.add(Box.createRigidArea(new Dimension(5,0)));
+    pane.add(home);
+    home.addActionListener(this);
+    home.setActionCommand("back");
 //this.add(pane,B);
 
 }
@@ -90,6 +96,8 @@ public static void PopUpFeb(){
 
   public void actionPerformed(ActionEvent e){
    String event = e.getActionCommand();
+   if(event.equals("back")){
+    new Window().setVisible(true);}
    if(event.equals("result")){
      String chosen = (String)cb.getSelectedItem();
      String chosenDay = (String)cb2.getSelectedItem();
@@ -135,6 +143,7 @@ public static void main(String[] args) {
      starter.setVisible(true);   
 }
     }
+
 
 
 
