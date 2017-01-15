@@ -17,7 +17,7 @@ public class Window3 extends JFrame implements ActionListener{
      this.setLocation(100, 10);
      this.setDefaultCloseOperation(EXIT_ON_CLOSE);  
      pane = this.getContentPane();
-     pane.setLayout(new FlowLayout());
+     pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
      pane.setBackground(Color.black);
      a = new JLabel("Choose the date you want to learn more about:", JLabel.CENTER);
      a.setForeground(Color.white);
@@ -51,6 +51,8 @@ public class Window3 extends JFrame implements ActionListener{
     pane.add(year);
     year.addActionListener(this);
     year.setActionCommand("result");
+JButton clickmeButton = new JButton("Back");
+pane.add(clickmeButton, BorderLayout.SOUTH);
 }
 public static void PopUp(){
         final JFrame parent = new JFrame();
@@ -88,7 +90,7 @@ public static void PopUpFeb(){
         //System.out.println("NAH");
         PopUpFeb();
      }
-    else{if (r % 15 == 1){
+    /*else{if (r % 15 == 1){
 	    System.out.println("20:25	Murfreesboro	TN	Sphere	20 seconds	Dark Red Orb Slowly Moving Across Skyline.  ");}
 	else if(r % 15 == 2){System.out.println("23:00	Fort Lauderdale	FL	Circle	15 minutes	Driving down the highway there was a big bright circular light, it would dim and get really bright again. Then it would break off  ");}
 	else if(r % 15 == 3){System.out.println("23:50	Conway	SC	Triangle	Still out there	((HOAX??)) Odd blinking lights, 3 in a shape of a triangle, and one dull but bright orange sphere shaped light.");}
@@ -105,7 +107,8 @@ public static void PopUpFeb(){
 	else if(r % 15 == 14){System.out.println("20:45	Jacksonville	FL	Light	20 minutes	Red lights, three, moving from east to west, the stright up.");}
         else if(r % 15 == 15){System.out.println("22:15	Corpus Christi	TX	Light	3 seconds	Appeared in the sky and descended straight down kind of slow, was too big to be an a/c; no sound. ");}
 	
-    }}}
+    }*/
+   }}
 
 
 
