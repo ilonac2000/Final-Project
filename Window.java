@@ -28,7 +28,7 @@ public Window() {
      JButton time = new JButton("Timeline");
      time.addActionListener(this);
      time.setActionCommand("graph");
-     JButton date = new JButton("Choice a date");
+     JButton date = new JButton("Choose a date");
      date.addActionListener(this);
      date.setActionCommand("calendar");
      map.setFont(new Font("Arial", Font.PLAIN, 50));
