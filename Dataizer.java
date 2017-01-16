@@ -13,7 +13,7 @@ private static  ArrayList<String> times  = new ArrayList<String>();
      
 
     
-    public static void organize (String fileName){
+  public static void organize (String fileName){
 
 
 
@@ -197,23 +197,24 @@ private static  ArrayList<String> times  = new ArrayList<String>();
 
 
     }
+      public static void dateFixer(){
+	for (int i = 0; i < dates.size(); i++){
+	      try{
+		  dates.set(i, ((dates.get(i)).substring(25,32)));
+		}
+	     catch(StringIndexOutOfBoundsException e ){}
 
+	}
+
+
+    }
   public static void main(String[]args){
       organize("UFOData2.txt");
-      countState();
-      System.out.println(Arrays.deepToString(stateCount));
-      //   System.out.println(AL);
-      // int  occ = Collections.frequency(state, "NY");
-     //   System.out.println(occ);
-      //  System.out.println( Arrays.toString(dates.toArray())); 
-
-      //System.out.println( Arrays.toString(city.toArray())); 
-      //System.out.println( Arrays.toString(state.toArray())); 
-      //System.out.println( Arrays.toString(shape.toArray())); 
-      // System.out.println( Arrays.toString(times.toArray())); 
-      // System.out.println( Arrays.toString(desc.toArray()));
-      
-      //    System.out.println( Arrays.toString(posted.toArray())); 
+      //  countState();
+      //System.out.println(Arrays.deepToString(stateCount));
+       dateFixer();
+         System.out.println( Arrays.toString(dates.toArray())); 
+     
        }
 
 
