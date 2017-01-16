@@ -222,14 +222,18 @@ public Window2() {
             k1.setBounds(100,100,100,100);
      		this.add(k1);
      		k1.setLocation(900,300); 
-     		l = new JLabel("Pennsylvania");
-            l.setBounds(100,100,100,100);
-     		this.add(l);
-     		l.setLocation(970,200); 
-     		m = new JLabel("New York");
-            m.setBounds(100,100,100,100);
-     		this.add(m);
-     		m.setLocation(1030,125); 
+     		l1 = new JLabel("Pennsylvania");
+            l1.setBounds(100,100,100,100);
+     		this.add(l1);
+     		l1.setLocation(970,200); 
+     		m1 = new JLabel("New York");
+            m1.setBounds(100,100,100,100);
+     		this.add(m1);
+     		m1.setLocation(1030,125); 
+            n1 = new JLabel("Maine");
+            n1.setBounds(100,100,100,100);
+            this.add(n1);
+            n1.setLocation(1130,25); 
 
         }
 
