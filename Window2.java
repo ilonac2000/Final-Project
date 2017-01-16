@@ -179,7 +179,7 @@ public Window2(){
             z.setBounds(100,100,100,100);
      		this.add(z);
      		z.setLocation(830,250); 
-     		a1 = new JLabel("<html> Missisippi <br>" + Dataizer.getSum("Missisippi")+ "</html>");
+     		a1 = new JLabel("<html> Missisippi <br>" + Dataizer.getSum("Mississippi")+ "</html>");
             a1.setBounds(100,100,100,100);
      		this.add(a1);
      		a1.setLocation(770,420);
