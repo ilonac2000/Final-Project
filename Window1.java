@@ -15,7 +15,7 @@ public class Window1 extends JFrame {
  private Container pane;
 	public Window1(){
      this.setTitle("Shapes");
-     this.setSize(1220,800);
+     this.setSize(1220,600);
      this.setLocation(100, 10);
      this.setDefaultCloseOperation(EXIT_ON_CLOSE);  
      pane = this.getContentPane();
@@ -25,13 +25,15 @@ public class Window1 extends JFrame {
      Image triangle = javax.imageio.ImageIO.read(new File("triangle.jpeg"));
      Image fire = javax.imageio.ImageIO.read(new File("fireball.jpg"));
      Image sphere = javax.imageio.ImageIO.read(new File("moon.jpg"));
+     Image cigar = javax.imageio.ImageIO.read(new File("cigar.jpg"));
     setContentPane(new JPanel(new BorderLayout()) {
         @Override
          public void paintComponent(Graphics g){
             g.drawImage(backgroundImage, 0, 0, null);
-            g.drawImage(triangle, 200, 300, null);
-            g.drawImage(fire, 420, 300, null);
-            g.drawImage(sphere, 670, 300, null);
+            g.drawImage(triangle, 100, 200, null);
+            g.drawImage(fire, 320, 200, null);
+            g.drawImage(sphere, 570, 200, null);
+            g.drawImage(cigar, 750, 200, null);
 
 
         }
