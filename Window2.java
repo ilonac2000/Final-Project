@@ -15,6 +15,12 @@ public class Window2 extends JFrame{
  private Container pane;
  private JLabel bkgrd;
  private JLabel a;
+ private JLabel b;
+ private JLabel c;
+ private JLabel d;
+ private JLabel e;
+ private JLabel f;
+ private JLabel g;
 
  
 public Window2() {
@@ -24,26 +30,36 @@ public Window2() {
      this.setDefaultCloseOperation(EXIT_ON_CLOSE);  
      pane = this.getContentPane();
      pane.setLayout(null);
-;
      try {
     final Image backgroundImage = javax.imageio.ImageIO.read(new File("map.jpeg"));
     setContentPane(new JPanel(new BorderLayout()) {
        // @Override
          public void paintComponent(Graphics g) {
             g.drawImage(backgroundImage, 0, 0, null);
+            a = new JLabel("California");
+            a.setBounds(100,100,100,100);
+     		this.add(a);
+     		a.setLocation(100,300);
+     		b = new JLabel("Oregon");
+            b.setBounds(100,100,100,100);
+     		this.add(b);
+     		b.setLocation(100,100);
+     		c = new JLabel("Washington");
+            c.setBounds(100,100,100,100);
+     		this.add(c);
+     		c.setLocation(150,10);
         }
+
     });
 } catch (IOException e) {
     throw new RuntimeException(e);
-}
-     a = new JLabel("32");
-     a.setFont(new Font("Arial", Font.BOLD, 40));
-     a.setLocation(30,10);
-     a.setBounds(100,100,200,30);
-     add(a);
+
      //a.setOpaque(true);
  }
 
+     //a.setFont(new Font("Arial", Font.BOLD, 40));
+
+}
 /*public Window2(){
 	 
 
@@ -65,6 +81,10 @@ public Window2() {
      starter.setVisible(true);
 }
 }
+
+
+
+
 
 
 
