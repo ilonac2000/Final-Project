@@ -20,7 +20,6 @@ public class Window2 extends JFrame{
  private JLabel d;
  private JLabel e;
  private JLabel f;
- private JLabel g;
  private JLabel h;
  private JLabel i;
  private JLabel j;
@@ -102,11 +101,59 @@ public Window2() {
      		f = new JLabel("Montana");
             f.setBounds(100,100,100,100);
      		this.add(f);
-     		f.setLocation(400,50);
-     		//g = new JLabel("Montana");
-            //g.setBounds(100,100,100,100);
-     		//this.add(g);
-     		//g.setLocation(150,10);
+     		f.setLocation(400,50);     	
+     		h = new JLabel("Wyoming");
+            h.setBounds(100,100,100,100);
+     		this.add(h);
+     		h.setLocation(400,150);  	
+     		i = new JLabel("Utah");
+            i.setBounds(100,100,100,100);
+     		this.add(i);
+     		i.setLocation(300,250); 
+     		j = new JLabel("Arizona");
+            j.setBounds(100,100,100,100);
+     		this.add(j);
+     		j.setLocation(300,400); 
+     		k = new JLabel("New Mexico");
+            k.setBounds(100,100,100,100);
+     		this.add(k);
+     		k.setLocation(400,400); 
+     		l = new JLabel("Colorado");
+            l.setBounds(100,100,100,100);
+     		this.add(l);
+     		l.setLocation(400,250); 
+     		m = new JLabel("Kansas");
+            m.setBounds(100,100,100,100);
+     		this.add(m);
+     		m.setLocation(550,225); 
+     		n = new JLabel("North Dakota");
+            n.setBounds(100,100,100,100);
+     		this.add(n);
+     		n.setLocation(500,50); 
+     		o = new JLabel("South Dakota");
+            o.setBounds(100,100,100,100);
+     		this.add(o);
+     		o.setLocation(550,125); 
+     		p = new JLabel("Nebraska");
+            p.setBounds(100,100,100,100);
+     		this.add(p);
+     		p.setLocation(550,325); 
+     		q = new JLabel("Oklahoma");
+            q.setBounds(100,100,100,100);
+     		this.add(q);
+     		q.setLocation(560,405); 
+     		r = new JLabel("Texas");
+            r.setBounds(100,100,100,100);
+     		this.add(r);
+     		r.setLocation(550,525); 
+     		s = new JLabel("Arkansas");
+            s.setBounds(100,100,100,100);
+     		this.add(s);
+     		s.setLocation(660,410); 
+     		t = new JLabel("Louisiana");
+            t.setBounds(100,100,100,100);
+     		this.add(t);
+     		t.setLocation(750,220); 
         }
 
     });
@@ -140,7 +187,6 @@ public Window2() {
      starter.setVisible(true);
 }
 }
-
 
 
 
