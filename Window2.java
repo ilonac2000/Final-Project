@@ -149,11 +149,32 @@ public Window2() {
      		s = new JLabel("Arkansas");
             s.setBounds(100,100,100,100);
      		this.add(s);
-     		s.setLocation(660,410); 
+     		s.setLocation(700,410); 
      		t = new JLabel("Louisiana");
             t.setBounds(100,100,100,100);
      		this.add(t);
-     		t.setLocation(750,220); 
+     		t.setLocation(700,520); 
+     	    u = new JLabel("Missouri");
+            u.setBounds(100,100,100,100);
+     		this.add(u);
+     		u.setLocation(700,300); 
+     	    v = new JLabel("Iowa");
+            v.setBounds(100,100,100,100);
+     		this.add(v);
+     		v.setLocation(700,220); 
+     		w = new JLabel("Minnesota");
+            w.setBounds(100,100,100,100);
+     		this.add(w);
+     		w.setLocation(660,70); 
+     		x = new JLabel("Iowa");
+            x.setBounds(100,100,100,100);
+     		this.add(x);
+     		x.setLocation(700,220); 
+     		y = new JLabel("Minnesota");
+            y.setBounds(100,100,100,100);
+     		this.add(y);
+     		y.setLocation(660,70); 
+
         }
 
     });
@@ -187,6 +208,7 @@ public Window2() {
      starter.setVisible(true);
 }
 }
+
 
 
 
