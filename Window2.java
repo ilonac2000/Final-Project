@@ -166,14 +166,51 @@ public Window2() {
             w.setBounds(100,100,100,100);
      		this.add(w);
      		w.setLocation(660,70); 
-     		x = new JLabel("Iowa");
+     		x = new JLabel("Wisconsin");
             x.setBounds(100,100,100,100);
      		this.add(x);
-     		x.setLocation(700,220); 
-     		y = new JLabel("Minnesota");
+     		x.setLocation(750,120); 
+     		y = new JLabel("Illinois");
             y.setBounds(100,100,100,100);
      		this.add(y);
-     		y.setLocation(660,70); 
+     		y.setLocation(750,250); 
+     		z = new JLabel("Indiana");
+            z.setBounds(100,100,100,100);
+     		this.add(z);
+     		z.setLocation(840,250); 
+     		a1 = new JLabel("Missisippi");
+            a1.setBounds(100,100,100,100);
+     		this.add(a1);
+     		a1.setLocation(780,420);
+     		b1 = new JLabel("Alabama");
+            b1.setBounds(100,100,100,100);
+     		this.add(b1);
+     		b1.setLocation(850,450);
+     		c1 = new JLabel("Georgia");
+            c1.setBounds(100,100,100,100);
+     		this.add(c1);
+     		c1.setLocation(920,460);
+     		d1 = new JLabel("Florida");
+            d1.setBounds(100,100,100,100);
+     		this.add(d1);
+     		d1.setLocation(960,550);
+     		e1 = new JLabel("South Carolina");
+            e1.setBounds(100,100,100,100);
+     		this.add(e1);
+     		e1.setLocation(950,400);
+     		f1 = new JLabel("Kentucky");
+            f1.setBounds(100,100,100,100);
+     		this.add(f1);
+     		f1.setLocation(850, 250);  
+     		g1 = new JLabel("North Carolina");
+            g1.setBounds(100,100,100,100);
+     		this.add(g1);
+     		g1.setLocation(950,350);     	
+     		h1 = new JLabel("Virginia");
+            h1.setBounds(100,100,100,100);
+     		this.add(h1);
+     		h1.setLocation(950,250);  	
+
 
         }
 
@@ -208,6 +245,9 @@ public Window2() {
      starter.setVisible(true);
 }
 }
+
+
+
 
 
 
