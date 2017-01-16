@@ -9,6 +9,12 @@ private static  ArrayList<String> times  = new ArrayList<String>();
     private static ArrayList<String> desc  = new ArrayList<String>();
        private static ArrayList<String> posted  = new ArrayList<String>();
     private static String [][]  stateCount = new String [50][2];
+    public static int TRIANGLE = 0;
+        public static int LIGHT = 0;
+        public static int SPHERE = 0;
+        public static int CIGAR = 0;
+        public static int UNKNOWN = 0;
+    
     
      
  public static void dateFixer(){
@@ -217,16 +223,26 @@ private static  ArrayList<String> times  = new ArrayList<String>();
 
     }
    
-     
+    public static void shapeCount (){
+	TRIANGLE = Collections.frequency(shape, "TRIANGLE");
+	CIGAR = Collections.frequency(shape, "CIGAR");
+	SPHERE = Collections.frequency(shape, "SPHERE");
+	LIGHT = (Collections.frequency(shape, "LIGHT")) + ( Collections.frequency(shape, "FIREBALL")) ;
+        UNKNOWN = Collections.frequency(shape, "UNKNOWN");
+	
+
+
+    }
   public static void main(String[]args){
       organize("UFOData2.txt");
+      shapeCount();
       //  countState();
       //System.out.println(Arrays.deepToString(stateCount));
        
       //    System.out.println( Arrays.toString(dates.toArray())); 
       //   System.out.println ( String.valueOf(Collections.frequency(state, "Ak")));
-       System.out.println ( String.valueOf(Collections.frequency(shape, "TRIANGLE")));
-       }
+      System.out.println(CIGAR);
+  }
 
 
     
