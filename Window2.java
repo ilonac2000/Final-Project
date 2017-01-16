@@ -210,30 +210,39 @@ public Window2() {
             h1.setBounds(100,100,100,100);
      		this.add(h1);
      		h1.setLocation(1000,300);  	
-			i1 = new JLabel("Tennessee");
+			i1 = new JLabel("<html> Tennessee <br>"  + Dataizer.getSum("Tennessee")+ "</html>");
             i1.setBounds(100,100,100,100);
      		this.add(i1);
      		i1.setLocation(800,360); 
-     		j1 = new JLabel("Ohio");
+     		j1 = new JLabel("<html> Ohio <br>" + Dataizer.getSum("Ohio")+ "</html>");
             j1.setBounds(100,100,100,100);
      		this.add(j1);
      		j1.setLocation(900,250); 
-     		k1 = new JLabel("West Virginia");
+     		k1 = new JLabel("<html> West Virginia <br>" + Dataizer.getSum("West Virginia")+ "</html>");
             k1.setBounds(100,100,100,100);
      		this.add(k1);
-     		k1.setLocation(905,280); 
-     		l1 = new JLabel("Pennsylvania");
+     		k1.setLocation(910,285); 
+     		l1 = new JLabel("<html> Pennsylvania <br>" + Dataizer.getSum("Pennsylvania")+ "</html>");
             l1.setBounds(100,100,100,100);
      		this.add(l1);
      		l1.setLocation(970,200); 
-     		m1 = new JLabel("New York");
+     		m1 = new JLabel("<html> New York <br>"+ Dataizer.getSum("New York")+ "</html>");
             m1.setBounds(100,100,100,100);
      		this.add(m1);
      		m1.setLocation(1030,125); 
-            n1 = new JLabel("Maine");
+            n1 = new JLabel("<html> Maine <br>"+ Dataizer.getSum("Maine")+ "</html>");
             n1.setBounds(100,100,100,100);
             this.add(n1);
             n1.setLocation(1130,25); 
+            o1 = new JLabel("<html> Hawaii <br>"+ Dataizer.getSum("Hawaii")+ "</html>");
+            o1.setBounds(100,100,100,100);
+            this.add(o1);
+            o1.setLocation(70,925); 
+            p1 = new JLabel("<html> Alaska <br>"+ Dataizer.getSum("Alaska")+ "</html>");
+            p1.setBounds(100,100,100,100);
+            this.add(p1);
+            p1.setLocation(30,925); 
+
 
 
         }
@@ -276,6 +285,7 @@ public Window2() {
      starter.setVisible(true);
 }
 }
+
 
 
 
