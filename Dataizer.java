@@ -20,13 +20,13 @@ private static  ArrayList<String> times  = new ArrayList<String>();
 	 
     try{  Scanner sc = new Scanner(new File(fileName)).useDelimiter("\\s*delimit\\s*");
 	try{  	while(sc.hasNext()){
-		    dates.add((sc.next()));
-		  city.add((sc.next()));
-		   state.add((sc.next()));
+		    desc.add((sc.next()));
+		  posted.add((sc.next()));
+		   dates.add((sc.next()));
+		    city.add((sc.next()));
+		    state.add((sc.next()));
 		    shape.add((sc.next()));
 		    times.add((sc.next()));
-		    desc.add((sc.next()));
-		    posted.add((sc.next()));
 	    }}
  	    catch(NoSuchElementException e){
 	    }
@@ -43,16 +43,16 @@ private static  ArrayList<String> times  = new ArrayList<String>();
     }
     
   public static void main(String[]args){
-      organize("UFOData.txt");
-      //      System.out.println( Arrays.toString(dates.toArray()));
+      organize("UFOData2.txt");
+      //System.out.println( Arrays.toString(dates.toArray())); //desc
 
-      //  System.out.println( Arrays.toString(city.toArray()));
-      System.out.println( Arrays.toString(state.toArray()));
-      //	  System.out.println( Arrays.toString(shape.toArray()));
-            //System.out.println( Arrays.toString(times.toArray()));
-      //   System.out.println( Arrays.toString(desc.toArray()));
+      //System.out.println( Arrays.toString(city.toArray())); //posted
+      //System.out.println( Arrays.toString(state.toArray())); //dates
+      //System.out.println( Arrays.toString(shape.toArray())); //city
+      // System.out.println( Arrays.toString(times.toArray())); //state
+       System.out.println( Arrays.toString(desc.toArray()));// shape
       
-      //	    System.out.println( Arrays.toString(posted.toArray()));
+      //    System.out.println( Arrays.toString(posted.toArray())); //times
        }
 
 
