@@ -11,7 +11,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JPanel;
 
 
-public class Window2 extends JFrame{
+public class Window2 extends JFrame implements ActionListener {
  private Container pane;
  private JLabel bkgrd;
  private JLabel a;
@@ -65,8 +65,8 @@ public class Window2 extends JFrame{
  private JLabel x1;
  private JLabel y1;
 
-public Window2() {
-     this.setTitle("Start");
+public Window2(){
+     this.setTitle("Map");
      this.setSize(1220,765);
      this.setLocation(100, 10);
      this.setDefaultCloseOperation(EXIT_ON_CLOSE);  
@@ -75,9 +75,10 @@ public Window2() {
      try {
     final Image backgroundImage = javax.imageio.ImageIO.read(new File("map.jpeg"));
     setContentPane(new JPanel(new BorderLayout()) {
-       // @Override
-         public void paintComponent(Graphics g) {
+        @Override
+         public void paintComponent(Graphics g){
             g.drawImage(backgroundImage, 0, 0, null);
+            setOpaque(true);
             a = new JLabel("<html> California <br>" + Dataizer.getSum("California") + "</html>");
             a.setBounds(100,100,100,100);
      		this.add(a);
@@ -234,20 +235,10 @@ public Window2() {
             n1.setBounds(100,100,100,100);
             this.add(n1);
             n1.setLocation(1130,25); 
-            o1 = new JLabel("<html> Hawaii <br>"+ Dataizer.getSum("Hawaii")+ "</html>");
-            o1.setBounds(100,100,100,100);
-            this.add(o1);
-            o1.setLocation(70,925); 
-            p1 = new JLabel("<html> Alaska <br>"+ Dataizer.getSum("Alaska")+ "</html>");
-            p1.setBounds(100,100,100,100);
-            this.add(p1);
-            p1.setLocation(30,925); 
-
-
-
         }
+    }
 
-    });
+            );
 } catch (IOException e) {
     throw new RuntimeException(e);
 
@@ -274,7 +265,22 @@ public Window2() {
      add(bkgrd);
  } */
 
+ public static void PopUp(){
+        final JFrame parent = new JFrame();
+        JButton button = new JButton();
+        JOptionPane.showMessageDialog(null, "This Month Does Not Have 31 Days");
+        
+     }
 
+public void actionPerformed(ActionEvent e){
+   String event = e.getActionCommand();
+   if(event.equals("back")){
+    new Window().setVisible(true);
+    }
+    if(event.equals("small")){
+        PopUp();
+    }
+}
 
  public static void main(String[] args) {
 
@@ -285,7 +291,6 @@ public Window2() {
      starter.setVisible(true);
 }
 }
-
 
 
 
