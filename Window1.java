@@ -26,6 +26,7 @@ public class Window1 extends JFrame {
      Image fire = javax.imageio.ImageIO.read(new File("fireball.jpg"));
      Image sphere = javax.imageio.ImageIO.read(new File("moon.jpg"));
      Image cigar = javax.imageio.ImageIO.read(new File("cigar.jpg"));
+     Image unknown = javax.imageio.ImageIO.read(new File("un.jpg"));
     setContentPane(new JPanel(new BorderLayout()) {
         @Override
          public void paintComponent(Graphics g){
@@ -34,6 +35,7 @@ public class Window1 extends JFrame {
             g.drawImage(fire, 320, 200, null);
             g.drawImage(sphere, 570, 200, null);
             g.drawImage(cigar, 750, 200, null);
+            g.drawImage(unknown, 985, 200, null);
 
 
         }
