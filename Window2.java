@@ -222,6 +222,14 @@ public Window2() {
             k1.setBounds(100,100,100,100);
      		this.add(k1);
      		k1.setLocation(900,300); 
+     		l = new JLabel("Pennsylvania");
+            l.setBounds(100,100,100,100);
+     		this.add(l);
+     		l.setLocation(970,200); 
+     		m = new JLabel("New York");
+            m.setBounds(100,100,100,100);
+     		this.add(m);
+     		m.setLocation(1030,125); 
 
         }
 
@@ -256,6 +264,8 @@ public Window2() {
      starter.setVisible(true);
 }
 }
+
+
 
 
 
