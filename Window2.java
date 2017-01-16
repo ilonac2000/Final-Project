@@ -78,7 +78,7 @@ public Window2() {
        // @Override
          public void paintComponent(Graphics g) {
             g.drawImage(backgroundImage, 0, 0, null);
-            a = new JLabel("California");
+            a = new JLabel("California \n" + Dataizer.getSum("California"));
             a.setBounds(100,100,100,100);
      		this.add(a);
      		a.setLocation(100,300);
@@ -235,6 +235,7 @@ public Window2() {
             this.add(n1);
             n1.setLocation(1130,25); 
 
+
         }
 
     });
@@ -263,11 +264,21 @@ public Window2() {
      bkgrd = new JLabel(new ImageIcon("map.jpeg"));
      add(bkgrd);
  } */
+
+
+
  public static void main(String[] args) {
+
+     Dataizer.organize("UFOData2.txt");
+     Dataizer.dateFixer();
+     Dataizer.countState();
      Window2 starter = new Window2();
      starter.setVisible(true);
 }
 }
+
+
+
 
 
 
