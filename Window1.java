@@ -23,11 +23,17 @@ public class Window1 extends JFrame {
      try {
      Image backgroundImage = javax.imageio.ImageIO.read(new File("galaxy.jpg"));
      Image triangle = javax.imageio.ImageIO.read(new File("triangle.jpeg"));
+     Image fire = javax.imageio.ImageIO.read(new File("fireball.jpg"));
+     Image sphere = javax.imageio.ImageIO.read(new File("moon.jpg"));
     setContentPane(new JPanel(new BorderLayout()) {
         @Override
          public void paintComponent(Graphics g){
             g.drawImage(backgroundImage, 0, 0, null);
             g.drawImage(triangle, 200, 300, null);
+            g.drawImage(fire, 420, 300, null);
+            g.drawImage(sphere, 670, 300, null);
+
+
         }
     }
 
