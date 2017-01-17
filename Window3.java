@@ -36,7 +36,7 @@ public class Window3 extends JFrame implements ActionListener{
 
     pane.add(lbl);
 
-    String[] choices = { "1","2", "3","4","5","6","7","8","9","10","11","12"};
+    String[] choices = { "01","02", "03","04","05","06","07","08","09","10","11","12"};
 
     cb = new JComboBox<String>(choices);
     cb.setMaximumSize(cb.getPreferredSize() );
@@ -88,6 +88,13 @@ public static void PopUp(){
         
      }
 
+public static void PopUpJan(){
+        final JFrame parent = new JFrame();
+        JButton button = new JButton();
+        JOptionPane.showMessageDialog(null, "Pick a different date");
+      
+     }
+
 public static void PopUpAns(){
         final JFrame parent = new JFrame();
         JButton button = new JButton();
@@ -108,14 +115,6 @@ public static void PopUpFeb(){
         JOptionPane.showMessageDialog(null, "February only had 29 days");
         
      }
-
-public static void PopUpJan(){
-        final JFrame parent = new JFrame();
-        JButton button = new JButton();
-        JOptionPane.showMessageDialog(null, "February only had 29 days");
-        
-     }
-
   public void actionPerformed(ActionEvent e){
    String event = e.getActionCommand();
    if(event.equals("back")){
@@ -131,20 +130,20 @@ public static void PopUpJan(){
 
      //System.out.print(d);
      //System.out.println(chosenDay);
-    if (chosenDay.equals("31") && ((chosen.equals("2")) || 
-        chosen.equals("4") || 
-        chosen.equals("6") || 
-        chosen.equals("9")|| 
+    if (chosenDay.equals("31") && ((chosen.equals("02")) || 
+        chosen.equals("04") || 
+        chosen.equals("06") || 
+        chosen.equals("09")|| 
         chosen.equals("11")))
         {
             //System.out.println("NO");
             PopUp();
      }
-    else if((Integer.valueOf(chosenDay) > 29) && (chosen.equals("2"))){
+    else if((Integer.valueOf(chosenDay) > 29) && (chosen.equals("02"))){
         //System.out.println("NAH");
         PopUpFeb();
      }
-     else if((chosenDay == "01") && (chosen.equals("1"))){
+    else if((chosenDay.equals("01")) && (chosen.equals("01"))){
         //System.out.println("NAH");
         PopUpJan();
      }
@@ -181,6 +180,4 @@ public static void main(String[] args) {
      starter.setVisible(true);   
 }
     }
-
-
 
