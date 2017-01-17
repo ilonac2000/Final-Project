@@ -37,13 +37,20 @@ private static  ArrayList<String> times  = new ArrayList<String>();
 	 
     try{  Scanner sc = new Scanner(new File(fileName)).useDelimiter("\\s*delimit\\s*");
 	try{  	while(sc.hasNext()){
-		    desc.add((sc.next()));
+		dates.add((sc.next()));
+		 city.add((sc.next()));
+		   state.add((sc.next()));
+		   shape.add((sc.next()));
+	
+		
+		times.add((sc.next()));
+			desc.add((sc.next()));
 		  posted.add((sc.next()));
-		   dates.add((sc.next()));
-		    city.add((sc.next()));
-		    state.add((sc.next()));
-		    shape.add((sc.next()));
-		    times.add((sc.next()));
+		   
+		   
+		  
+		    
+		    
 	    }}
  	    catch(NoSuchElementException e){
 	    }
@@ -248,11 +255,15 @@ private static  ArrayList<String> times  = new ArrayList<String>();
       //  countState();
       //System.out.println(Arrays.deepToString(stateCount));
        
-      // System.out.println( Arrays.toString(dates.toArray())); 
+      // System.out.println( Arrays.toString((dates.subList(0, 1800)).toArray())); 
       //   System.out.println ( String.valueOf(Collections.frequency(state, "Ak")));
       // System.out.println(CIGAR);
-         returnInfo("6/11/16");
-       System.out.println( Arrays.toString(result.toArray()));     
+      returnInfo("6/11/16");
+       System.out.println( Arrays.toString(result.toArray()));
+      //    System.out.println( Arrays.toString(city.toArray()));
+
+
+      
   }
 
 
