@@ -64,7 +64,7 @@ public class Window1 extends JFrame {
             c.setLocation(750,300); 
             g.drawImage(unknown, 985, 200, null);
             JLabel u = new JLabel("<html> Unknown Shape <br>" + "</html>", JLabel.CENTER);
-            u.setBounds(100,300,200,140);
+            u.setBounds(960,300,200,140);
             u.setForeground(Color.white);
      		u.setFont(new Font("Arial", Font.BOLD, 20));
             this.add(u);
