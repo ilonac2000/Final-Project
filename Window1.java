@@ -24,12 +24,12 @@ public class Window1 extends JFrame {
      pane = this.getContentPane();
      pane.setLayout(null);
      try {
-     Image backgroundImage = javax.imageio.ImageIO.read(new File("galaxy.jpg"));
-     Image triangle = javax.imageio.ImageIO.read(new File("triangle.jpeg"));
-     Image fire = javax.imageio.ImageIO.read(new File("fireball.jpg"));
-     Image sphere = javax.imageio.ImageIO.read(new File("moon.jpg"));
-     Image cigar = javax.imageio.ImageIO.read(new File("cigar.jpg"));
-     Image unknown = javax.imageio.ImageIO.read(new File("un.jpg"));
+    final Image backgroundImage = javax.imageio.ImageIO.read(new File("galaxy.jpg"));
+     final Image triangle = javax.imageio.ImageIO.read(new File("triangle.jpeg"));
+     final Image fire = javax.imageio.ImageIO.read(new File("fireball.jpg"));
+   final   Image sphere = javax.imageio.ImageIO.read(new File("moon.jpg"));
+     final Image cigar = javax.imageio.ImageIO.read(new File("cigar.jpg"));
+     final Image unknown = javax.imageio.ImageIO.read(new File("un.jpg"));
     setContentPane(new JPanel(new BorderLayout()) {
        // @Override
          public void paintComponent(Graphics g){
