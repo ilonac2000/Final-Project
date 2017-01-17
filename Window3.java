@@ -10,24 +10,28 @@ public class Window3 extends JFrame implements ActionListener{
     private JComboBox<String> cb; 
     private JComboBox<String> cb2;
 
+
    public Window3() {
      this.setTitle("Calendar");
      this.setSize(1200,600);
      this.setLocation(100, 10);
      this.setDefaultCloseOperation(EXIT_ON_CLOSE);  
      pane = this.getContentPane();
-     pane.setLayout(new BoxLayout(pane, BoxLayout.Y_AXIS));
-     //pane.setLayout();
+
+     pane.setLayout(new BoxLayout(pane, BoxLayout.PAGE_AXIS));
+      //pane.setLayout();
      pane.setBackground(Color.black);
      a = new JLabel("Choose the date you want to learn more about:", JLabel.CENTER);
      a.setForeground(Color.white);
      a.setFont(new Font("Arial", Font.BOLD, 50));
      //a.setLocation(150, 150);
+     a.setAlignmentX(Component.CENTER_ALIGNMENT);
      pane.add(a);
      JLabel lbl = new JLabel("Month");
      lbl.setForeground(Color.white);
-     lbl.setFont(new Font("Arial", Font.BOLD, 20));
      lbl.setAlignmentX(Component.CENTER_ALIGNMENT);
+     lbl.setFont(new Font("Arial", Font.BOLD, 20));
+     //lbl.setAlignmentX(Component.RIGHT_ALIGNMENT);
 
     pane.add(lbl);
 
@@ -36,6 +40,7 @@ public class Window3 extends JFrame implements ActionListener{
     cb = new JComboBox<String>(choices);
     cb.setMaximumSize(cb.getPreferredSize() );
     pane.add(cb);
+    cb.setAlignmentX(Component.CENTER_ALIGNMENT);
     JLabel lbl2 = new JLabel("Day");
     lbl2.setForeground(Color.white);
     lbl2.setFont(new Font("Arial", Font.BOLD, 20));
@@ -48,19 +53,28 @@ public class Window3 extends JFrame implements ActionListener{
     cb2 = new JComboBox<String>(choices2);
     //cb2.setPrototypeDisplayValue("January");
     cb2.setMaximumSize(cb2.getPreferredSize() );
+    cb2.setAlignmentX(Component.CENTER_ALIGNMENT);
     pane.add(cb2);
     year = new JButton("2016");
-    pane.add(year);
+    year.setAlignmentX(Component.CENTER_ALIGNMENT);
+   // pane.add(year);
     year.addActionListener(this);
     year.setActionCommand("result");
+    //pane.add(Box.createRigidArea(new Dimension(5,0)));
 
 
   //  this.setLayout(new BorderLayout());
 //JPanel buttonPanel = new JPanel();
 //buttonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 //buttonPanel.setLocation(150, 150);
-JButton clickmeButton = new JButton("Back");
-pane.add(clickmeButton, BorderLayout.SOUTH);
+JButton home = new JButton("Back");
+home.setAlignmentX(Component.CENTER_ALIGNMENT);
+    pane.add(year);
+    pane.add(Box.createRigidArea(new Dimension(3000,350)));
+    //pane.add(Box.createRigidArea(new Dimension(5,0)));
+    pane.add(home);
+    home.addActionListener(this);
+    home.setActionCommand("back");
 //this.add(pane,B);
 
 }
@@ -82,6 +96,8 @@ public static void PopUpFeb(){
 
   public void actionPerformed(ActionEvent e){
    String event = e.getActionCommand();
+   if(event.equals("back")){
+    new Window().setVisible(true);}
    if(event.equals("result")){
      String chosen = (String)cb.getSelectedItem();
      String chosenDay = (String)cb2.getSelectedItem();
@@ -127,7 +143,4 @@ public static void main(String[] args) {
      starter.setVisible(true);   
 }
     }
-
-
-
 
