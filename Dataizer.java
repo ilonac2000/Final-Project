@@ -61,12 +61,13 @@ private static  ArrayList<String> times  = new ArrayList<String>();
       public static void  returnInfo(String date){
 	  int n = dates.indexOf(date) ;
 	  //  ArrayList<String> result  = new ArrayList<String>();
-	   while (dates.get(n) == date){
+	  while ((dates.get(n)).compareTo( date) == 0
+		 ){
 	      result.add((city.get(n))
-			 // +
-			 // (state.get(n))
-			 // +
-			 // (desc.get(n))
+			  + " " + 
+			  (state.get(n))
+			  + " " +
+			  (desc.get(n))
 			 );
 	      n++;}
 	
@@ -247,11 +248,11 @@ private static  ArrayList<String> times  = new ArrayList<String>();
       //  countState();
       //System.out.println(Arrays.deepToString(stateCount));
        
-        System.out.println( Arrays.toString(dates.toArray())); 
+      // System.out.println( Arrays.toString(dates.toArray())); 
       //   System.out.println ( String.valueOf(Collections.frequency(state, "Ak")));
       // System.out.println(CIGAR);
-      //   returnInfo("12/11/16");
-      // System.out.println( Arrays.toString(result.toArray()));     
+         returnInfo("6/11/16");
+       System.out.println( Arrays.toString(result.toArray()));     
   }
 
 
