@@ -48,19 +48,25 @@ public Window() {
   public void actionPerformed(ActionEvent e){
    String event = e.getActionCommand();
    if(event.equals("places")){
+     Dataizer.organize("UFOData2.txt");
+     Dataizer.dateFixer();
+     Dataizer.countState();
      new Window2().setVisible(true);
    }
    if(event.equals("graph")){
+     Dataizer.organize("UFOData2.txt");
+     Dataizer.dateFixer();
+     Dataizer.countState();
     new Window1().setVisible(true);
    }
    if(event.equals("calendar")){
+     Dataizer.organize("UFOData2.txt");
+     Dataizer.dateFixer();
+     Dataizer.countState();
     new Window3().setVisible(true);
    }
   }
 }
-
-
-
 
 
 
