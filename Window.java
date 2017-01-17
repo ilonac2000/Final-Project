@@ -56,17 +56,16 @@ public Window() {
    if(event.equals("graph")){
      Dataizer.organize("UFOData2.txt");
      Dataizer.dateFixer();
-     Dataizer.countState();
+     Dataizer.shapeCount();
     new Window1().setVisible(true);
    }
    if(event.equals("calendar")){
      Dataizer.organize("UFOData2.txt");
      Dataizer.dateFixer();
      Dataizer.countState();
+     
     new Window3().setVisible(true);
+
    }
   }
 }
-
-
-
