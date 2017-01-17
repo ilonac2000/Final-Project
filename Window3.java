@@ -9,6 +9,7 @@ public class Window3 extends JFrame implements ActionListener{
     private JButton year;
     private JComboBox<String> cb; 
     private JComboBox<String> cb2;
+    public static String d;
 
 
    public Window3() {
@@ -35,7 +36,7 @@ public class Window3 extends JFrame implements ActionListener{
 
     pane.add(lbl);
 
-    String[] choices = { "January","February", "March","April","May","June","July","August","September","October","November","December"};
+    String[] choices = { "1","2", "3","4","5","6","7","8","9","10","11","12"};
 
     cb = new JComboBox<String>(choices);
     cb.setMaximumSize(cb.getPreferredSize() );
@@ -87,7 +88,28 @@ public static void PopUp(){
         
      }
 
+public static void PopUpAns(){
+        final JFrame parent = new JFrame();
+        JButton button = new JButton();
+            System.out.println(d);
+    for (int i = 0; i < Dataizer.result.size(); i++){
+       Dataizer.result.remove(i);
+    }
+    Dataizer.returnInfo(d);
+        System.out.println(Dataizer.result);
+        String a = Dataizer.result.get(1);
+        JOptionPane.showMessageDialog(null, a);
+        
+     }
+
 public static void PopUpFeb(){
+        final JFrame parent = new JFrame();
+        JButton button = new JButton();
+        JOptionPane.showMessageDialog(null, "February only had 29 days");
+        
+     }
+
+public static void PopUpJan(){
         final JFrame parent = new JFrame();
         JButton button = new JButton();
         JOptionPane.showMessageDialog(null, "February only had 29 days");
@@ -101,22 +123,36 @@ public static void PopUpFeb(){
    if(event.equals("result")){
      String chosen = (String)cb.getSelectedItem();
      String chosenDay = (String)cb2.getSelectedItem();
-     //System.out.print(chosen);
+     if (Integer.valueOf(chosenDay) < 10){
+        chosenDay = "0" + chosenDay;
+     }
+     d = chosen + "/" + chosenDay + "/" + "16";
+    // System.out.println(Dataizer.result);
+
+     //System.out.print(d);
      //System.out.println(chosenDay);
-    if (chosenDay.equals("31") && ((chosen.equals("February")) || 
-        chosen.equals("April") || 
-        chosen.equals("June") || 
-        chosen.equals("September")|| 
-        chosen.equals("November")))
+    if (chosenDay.equals("31") && ((chosen.equals("2")) || 
+        chosen.equals("4") || 
+        chosen.equals("6") || 
+        chosen.equals("9")|| 
+        chosen.equals("11")))
         {
             //System.out.println("NO");
             PopUp();
      }
-    else if((Integer.valueOf(chosenDay) > 29) && (chosen.equals("February"))){
+    else if((Integer.valueOf(chosenDay) > 29) && (chosen.equals("2"))){
         //System.out.println("NAH");
         PopUpFeb();
      }
+     else if((chosenDay == "01") && (chosen.equals("1"))){
+        //System.out.println("NAH");
+        PopUpJan();
+     }
+     else{
+        PopUpAns();
+     }
          /*else{if (r % 15 == 1){
+     }
         System.out.println("20:25   Murfreesboro    TN  Sphere  20 seconds  Dark Red Orb Slowly Moving Across Skyline.  ");}
     else if(r % 15 == 2){System.out.println("23:00  Fort Lauderdale FL  Circle  15 minutes  Driving down the highway there was a big bright circular light, it would dim and get really bright again. Then it would break off  ");}
     else if(r % 15 == 3){System.out.println("23:50  Conway  SC  Triangle    Still out there ((HOAX??)) Odd blinking lights, 3 in a shape of a triangle, and one dull but bright orange sphere shaped light.");}
@@ -139,6 +175,8 @@ public static void PopUpFeb(){
  
 }
 public static void main(String[] args) {
+     Dataizer.organize("UFOData2.txt");
+    Dataizer.dateFixer();
      Window3 starter = new Window3();
      starter.setVisible(true);   
 }
