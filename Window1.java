@@ -14,9 +14,8 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 
-public class Window1 extends JFrame implements ActionListener{
+public class Window1 extends JFrame {
  private Container pane;
- private JButton home;
 	public Window1(){
      this.setTitle("Shapes");
      this.setSize(1220,600);
@@ -24,7 +23,6 @@ public class Window1 extends JFrame implements ActionListener{
      this.setDefaultCloseOperation(EXIT_ON_CLOSE);  
      pane = this.getContentPane();
      pane.setLayout(null);
-
      try {
      Image backgroundImage = javax.imageio.ImageIO.read(new File("galaxy.jpg"));
      Image triangle = javax.imageio.ImageIO.read(new File("triangle.jpeg"));
@@ -70,23 +68,6 @@ public class Window1 extends JFrame implements ActionListener{
             u.setForeground(Color.white);
      		u.setFont(new Font("Arial", Font.BOLD, 20));
             this.add(u);
-            home = new JButton("BACK");
-            home.setFont(new Font("Arial", Font.BOLD, 20));
-			home.setAlignmentX(Component.CENTER_ALIGNMENT);
-			home.addActionListener(new ActionListener() {
-    			@Override
-    			public void actionPerformed( ActionEvent aActionEvent ) {
-      		new Window().setVisible(true);
-    		}
-  } );
-    //pane.add(Box.createRigidArea(new Dimension(5,0)));
-    		this.add(home);
-
-    		home.setActionCommand("back");
-    		home.setBounds(1000,500,200,140);
-
-
-
          //   u.setLocation(965,300); 
         }
     }
@@ -99,14 +80,8 @@ public class Window1 extends JFrame implements ActionListener{
  }
 
      //a.setFont(new Font("Arial", Font.BOLD, 40));
-}
 
-  public void actionPerformed(ActionEvent e){
-   String event = e.getActionCommand();
-   if(event.equals("back")){
-    new Window().setVisible(true);}
 }
-
  public static void main(String[] args) {
      Dataizer.organize("UFOData2.txt");
      Dataizer.dateFixer();
